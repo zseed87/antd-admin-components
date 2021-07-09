@@ -1,0 +1,89 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "@zseed/antd-admin-components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zseed87/antd-admin-components.git"
+  },
+  "keywords": [
+    "zseed87",
+    "hooks"
+  ],
+  "author": {
+    "name": "zseed87",
+    "email": "982747322@qq.com"
+  },
+  "bugs": {
+    "url": "https://github.com/zseed87/antd-admin-components/issues"
+  },
+  "homepage": "https://github.com/zseed87/antd-admin-components#readme",
+  "module": "dist/tsdx.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/tsdx.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/tsdx.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^5.0.1",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "antd": "^4.16.6",
+    "autoprefixer": "^8.0.0",
+    "cssnano": "^4.1.10",
+    "husky": "^7.0.1",
+    "less": "^4.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup-plugin-postcss": "^3.1.8",
+    "size-limit": "^5.0.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.5",
+    "use-zseed": "^1.0.1"
+  },
+  "browserslist": [
+    "iOS >= 8",
+    "last 1 versions",
+    "> 2%",
+    "not dead",
+    "not op_mini all"
+  ]
+}
