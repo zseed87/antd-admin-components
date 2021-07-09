@@ -1627,6 +1627,11 @@
   resolved "https://registry.nlark.com/@xtuc/long/download/@xtuc/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha1-0pHGpOl5ibXGHZrPOWrk/hM6cY0=
 
+"@zseed/use-zseed@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@zseed/use-zseed/-/use-zseed-1.0.0.tgz#c91571e487d3d3ba85cdb6a0caba0becaf37e4e0"
+  integrity sha512-jgRsxy1f+ipD7AorbElCN/tjkM75HMMGTAjLUGirGVboxz2sPO6/fnhYIv8f1XuX5k904uF1XunoRDrFjwZm5g==
+
 abab@^2.0.0:
   version "2.0.5"
   resolved "https://registry.nlark.com/abab/download/abab-2.0.5.tgz#c0b678fb32d60fc1219c784d6a826fe385aeb79a"
@@ -9579,11 +9584,6 @@ url@^0.11.0:
   dependencies:
     punycode "1.3.2"
     querystring "0.2.0"
-
-use-zseed@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/use-zseed/-/use-zseed-1.0.1.tgz#9b3b6cd9eb18cdf33640f2f6d1ff2f9a0893cf0c"
-  integrity sha512-2M8pIw6vycG6YBHNLb3G89SW/dwX6y56aVIDAV6W8JPUsRjHKmwAA8g4tGTJ79PKh0JhTy+83K6Jj9laVjjNMA==
 
 use@^3.1.0:
   version "3.1.1"

@@ -6,7 +6,7 @@
 import React, { forwardRef, Key, useCallback, useEffect, useImperativeHandle, useMemo, useState } from "react";
 import { Badge, Button, Col, Form, Row, Space, Table, } from "antd";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
-import { useTable, useWindowSize } from "use-zseed";
+import { useTable, useWindowSize } from "@zseed/use-zseed";
 
 // ==================
 // 常量、工具库
