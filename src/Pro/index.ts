@@ -3,7 +3,7 @@ import detail from "./detail";
 import table from "./table";
 
 export default {
-  action,
-  detail,
-  table
+  Action: action,
+  Detail: detail,
+  Table: table
 }

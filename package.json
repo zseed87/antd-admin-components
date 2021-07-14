@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -62,7 +62,9 @@
     }
   ],
   "devDependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
     "@size-limit/preset-small-lib": "^5.0.1",
+    "@tinymce/tinymce-react": "^3.12.6",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
     "@zseed/use-zseed": "^1.0.0",

@@ -1,7 +1,7 @@
 import React from "react";
 import { DatePicker, Input, InputNumber, Radio, Select, TreeSelect } from "antd";
-// import RangePicker from "@/components/form/dateRange/one";
-// import Editor from "@/components/Editor";
+import RangePicker from "../DateRange/one";
+import Editor from "../Editor";
 // import UploadUni from "@/components/Upload/new";
 
 export const getItemJsx = (obj: any, selectDatas: any, type?: string) => {
@@ -57,39 +57,33 @@ export const getItemJsx = (obj: any, selectDatas: any, type?: string) => {
 				{...searchTypeProps}
 			/>
 		);
-	// } else if (valueType === "dateRange") {
-	// 	return type === "action" ? (
-	// 		<RangePicker {...typeProps} />
-	// 	) : (
-	// 		<RangePicker {...searchTypeProps} />
-	// 		// <DateRange
-	// 		// 	placeholderStart="请选择开始时间"
-	// 		// 	placeholderEnd="请选择结束时间"
-	// 		// 	// allowClear
-	// 		// 	// style={{
-	// 		// 	// 	width: "100%"
-	// 		// 	// }}
-	// 		// 	{...typeProps}
-	// 		// />
-	// 	);
-	// } else if (valueType === "editor") {
-	// 	return (
-	// 		<Editor
-	// 			defaultProps={{
-	// 				init: {
-	// 					content_style:
-	// 						"body{padding:0 15px!important;margin:0!important;margin: 0;font-size: 14px;font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-variant: tabular-nums;line-height: 1.5715;-webkit-font-feature-settings: tnum;font-feature-settings: tnum;}p{padding:0;margin:0;overflow:hidden;*zoom:1;}img{margin-bottom: 5px;max-width:100%;height:auto}::-webkit-scrollbar{width: 6px;height: 6px;background-color: transparent;}::-webkit-scrollbar-thumb{background-color: #535353;}",
-	// 					width: "100%",
-	// 					height: 450,
-	// 					paste_webkit_styles: "all",
-	// 					// automatic_uploads: false,
-	// 					images_dataimg_filter: img => {
-	// 						return img.hasAttribute("internal-blob");
-	// 					},
-	// 				},
-	// 			}}
-	// 		/>
-	// 	);
+	} else if (valueType === "dateRange") {
+		return type === "action" ? (
+			<RangePicker {...typeProps} />
+		) : (
+			<RangePicker {...searchTypeProps} />
+		);
+	} else if (valueType === "editor") {
+		const { api, ...otherProps } = typeProps;
+		return (
+			<Editor
+				api={api}
+				defaultProps={{
+					init: {
+						content_style:
+							"body{padding:0 15px!important;margin:0!important;margin: 0;font-size: 14px;font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-variant: tabular-nums;line-height: 1.5715;-webkit-font-feature-settings: tnum;font-feature-settings: tnum;}p{padding:0;margin:0;overflow:hidden;*zoom:1;}img{margin-bottom: 5px;max-width:100%;height:auto}::-webkit-scrollbar{width: 6px;height: 6px;background-color: transparent;}::-webkit-scrollbar-thumb{background-color: #535353;}",
+						width: "100%",
+						height: 450,
+						paste_webkit_styles: "all",
+						// automatic_uploads: false,
+						images_dataimg_filter: img => {
+							return img.hasAttribute("internal-blob");
+						},
+					},
+				}}
+				{...otherProps}
+			/>
+		);
 	// } else if (valueType === "upload") {
 	// 	return <UploadUni {...typeProps} />;
 	} else if (valueType === "order") {
